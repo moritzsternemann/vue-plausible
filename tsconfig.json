@@ -1,0 +1,4 @@
+{
+  // VSCode currently doesn't support a tsconfig file with a different name.
+  "extends": "./tsconfig-esm.json"
+}
