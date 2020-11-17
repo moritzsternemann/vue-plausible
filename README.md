@@ -16,7 +16,7 @@ yarn install vue-plausible
 ```
 
 ### Vue.js Plugin
-```
+```js
 import Vue from 'vue'
 import { VuePlausible } from 'vue-plausible'
 
@@ -29,7 +29,7 @@ Vue.$plausible.enableAutoPageviews() // optional
 To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()` method.
 
 ### NuxtJS Module
-```
+```js
 // nuxt.config.js
 
 export default {
