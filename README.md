@@ -12,7 +12,7 @@ npm install vue-plausible
 
 Using [yarn](https://yarnpkg.com/):
 ```
-yarn install vue-plausible
+yarn add vue-plausible
 ```
 
 ### Vue.js Plugin
