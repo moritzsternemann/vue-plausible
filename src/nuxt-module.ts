@@ -11,4 +11,4 @@ const PlausibleModule: Module<PlausibleOptions> = function (moduleOptions) {
 
 export default PlausibleModule
 
-export const meta = require('../package.json')
+export const meta = require('../../package.json')
