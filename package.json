@@ -31,7 +31,7 @@
     "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
     "prepublishOnly": "npm run build",
     "release": "standard-version",
-    "release:pre": "standard-version --preprelease pre"
+    "release:pre": "standard-version --prerelease pre"
   },
   "dependencies": {
     "plausible-tracker": "^0.3.1"
