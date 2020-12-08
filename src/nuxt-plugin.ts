@@ -28,7 +28,19 @@ declare module 'vuex/types/index' {
 }
 
 const PlausiblePlugin: Plugin = (context, inject) => {
-  const plausible = Plausible('<% options %>' as PlausibleOptions)
+  const optionsDomain = '<%= options.domain %>'
+  const optionsHashMode = '<%= options.hashMode %>' as any
+  const optionsTrackLocalhost = '<%= options.trackLocalhost %>' as any
+  const optionsApiHost = '<%= options.apiHost %>'
+
+  const options = {
+    domain: optionsDomain.length ? optionsDomain : null,
+    hashMode: optionsHashMode === 'true',
+    trackLocalhost: optionsTrackLocalhost === 'true',
+    apiHost: optionsApiHost.length ? optionsApiHost : null
+  } as PlausibleOptions
+
+  const plausible = Plausible(options)
   plausible.enableAutoPageviews()
   inject('plausible', plausible)
 }
