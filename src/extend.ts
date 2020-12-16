@@ -8,6 +8,11 @@ declare module 'vue/types/vue' {
 }
 
 declare module '@nuxt/types' {
+  // module configuration in nuxt.config.ts
+  interface NuxtOptions {
+    plausible?: PlausibleOptions
+  }
+
   // nuxtContext.app.$plausible inside asyncData, fetch, plugins, middleware, nuxtServerInit
   interface NuxtAppOptions {
     readonly $plausible: ReturnType<typeof Plausible>

@@ -34,6 +34,7 @@
     "release:pre": "standard-version --sign --prerelease pre"
   },
   "dependencies": {
+    "defu": "^2.0.4",
     "plausible-tracker": "^0.3.1"
   },
   "devDependencies": {

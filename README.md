@@ -35,10 +35,11 @@ To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()
 export default {
   // ...
   modules: [
-    ['vue-plausible', {
-      // see configuration section
-    }]
-  ]
+    'vue-plausible'
+  ],
+  plausible: {
+    // see configuration section
+  }
   // ...
 }
 ```
