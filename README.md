@@ -29,8 +29,11 @@ Vue.$plausible.enableAutoPageviews() // optional
 To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()` method.
 
 ### NuxtJS Module
-```js
+```ts
 // nuxt.config.js
+
+// optional when using nuxt.config.ts
+/// <reference types="vue-plausible" />
 
 export default {
   // ...
