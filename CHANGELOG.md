@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.1...v1.1.2) (2021-01-18)
+
+
+### Bug Fixes
+
+* Add missing default value for the apiHost setting of the nuxt plugin ([#4](https://github.com/moritzsternemann/vue-plausible/issues/4)) ([4436784](https://github.com/moritzsternemann/vue-plausible/commit/44367847c6c5d3034b7062759bef0ded28a22f70))
+
 ### [1.1.1](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.0...v1.1.1) (2020-12-16)
 
 ## [1.1.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.0.1...v1.1.0) (2020-12-16)
