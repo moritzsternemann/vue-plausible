@@ -1,5 +1,4 @@
 import path from 'path'
-import defu from 'defu'
 import { Module } from '@nuxt/types'
 import { PlausibleOptions } from 'plausible-tracker'
 
@@ -12,10 +11,11 @@ const defaultOptions: PlausibleOptions = {
 }
 
 const PlausibleModule: Module<PlausibleOptions> = function (moduleOptions) {
-  const options = defu({
+  const options = {
+    ...defaultOptions,
     ...this.options.plausible,
     ...moduleOptions
-  }, defaultOptions)
+  }
 
   this.addPlugin({
     src: path.resolve(__dirname, './nuxt-plugin.js'),
