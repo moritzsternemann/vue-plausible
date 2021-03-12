@@ -1,4 +1,3 @@
-import path from 'path'
 import { Module } from '@nuxt/types'
 import { PlausibleOptions } from 'plausible-tracker'
 
@@ -18,7 +17,7 @@ const PlausibleModule: Module<PlausibleOptions> = function (moduleOptions) {
   }
 
   this.addPlugin({
-    src: path.resolve(__dirname, './nuxt-plugin.js'),
+    src: require.resolve('../esm/nuxt-plugin.js'),
     mode: 'client',
     ssr: false,
     fileName: 'vue-plausible.client.js',
