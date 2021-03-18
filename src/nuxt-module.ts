@@ -18,7 +18,7 @@ const PlausibleModule: Module<PlausibleOptions> = function (moduleOptions) {
   }
 
   this.addPlugin({
-    src: path.resolve(__dirname, './nuxt-plugin.js'),
+    src: path.resolve(__dirname, '../esm/nuxt-plugin.js'),
     mode: 'client',
     ssr: false,
     fileName: 'vue-plausible.client.js',
