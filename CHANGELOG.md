@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.3...v1.1.4) (2021-03-18)
+
+
+### Bug Fixes
+
+* inject esm plugin in nuxt environment ([#7](https://github.com/moritzsternemann/vue-plausible/issues/7)) ([cd7a3e6](https://github.com/moritzsternemann/vue-plausible/commit/cd7a3e65cabd01b2ee7ed998b358bc4d22764989))
+
 ### [1.1.3](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.2...v1.1.3) (2021-02-19)
 
 ### [1.1.2](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.1...v1.1.2) (2021-01-18)
