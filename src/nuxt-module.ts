@@ -11,10 +11,13 @@ const defaultOptions: PlausibleOptions = {
 }
 
 const PlausibleModule: Module<PlausibleOptions> = function (moduleOptions) {
+  const { nuxt } = this
+
   const options = {
     ...defaultOptions,
     ...this.options.plausible,
-    ...moduleOptions
+    ...moduleOptions,
+    ...nuxt.options.runtimeConfig?.plausible
   }
 
   this.addPlugin({

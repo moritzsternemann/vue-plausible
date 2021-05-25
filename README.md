@@ -42,8 +42,16 @@ export default {
   ],
   plausible: {
     // see configuration section
-  }
+  },
   // ...
+  // Or use publicRuntimeConfig to allow dotenv configuration over
+  // different environments
+  publicRuntimeConfig: {
+    plausible: {
+      domain: process.env.PLAUSIBLE_DOMAIN || null,
+      apiHost: process.env.PLAUSIBLE_API_HOST || 'https://plausible.io',
+    },
+  }
 }
 ```
 

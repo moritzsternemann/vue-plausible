@@ -14,9 +14,11 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io'
   } as PlausibleOptions
 
-  const plausible = Plausible(options)
-  plausible.enableAutoPageviews()
-  inject('plausible', plausible)
+  if (options.domain !== null) {
+    const plausible = Plausible(options)
+    plausible.enableAutoPageviews()
+    inject('plausible', plausible)
+  }
 }
 
 export default PlausiblePlugin
