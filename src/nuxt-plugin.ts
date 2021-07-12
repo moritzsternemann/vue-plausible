@@ -11,7 +11,9 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     domain: optionsDomain.length ? optionsDomain : null,
     hashMode: optionsHashMode === 'true',
     trackLocalhost: optionsTrackLocalhost === 'true',
-    apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io'
+    apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io',
+    // Override plugin configuration with Nuxt Runtime config without re-building
+    ...context.$config?.plausible
   } as PlausibleOptions
 
   if (options.domain !== null) {
