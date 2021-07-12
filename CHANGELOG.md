@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.0...v1.2.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* Add missing shim for PlausibleOptions in Nuxt runtime config ([cf310da](https://github.com/moritzsternemann/vue-plausible/commit/cf310daa1c936daa1a6e46ece08932d2d8f70002))
+* Use Nuxt runtime config from within plugin instead of module ([#12](https://github.com/moritzsternemann/vue-plausible/issues/12)) ([351104b](https://github.com/moritzsternemann/vue-plausible/commit/351104bb1b912f155bd823a87ae95d0b71f1e108))
+
 ## [1.2.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.4...v1.2.0) (2021-07-12)
 
 

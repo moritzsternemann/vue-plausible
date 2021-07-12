@@ -1,6 +1,6 @@
 {
   "name": "vue-plausible",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Plausible analytics as Vue.js and NuxtJS plugins",
   "license": "MIT",
   "author": {
