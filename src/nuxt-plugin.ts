@@ -11,8 +11,7 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     domain: optionsDomain.length ? optionsDomain : null,
     hashMode: optionsHashMode === 'true',
     trackLocalhost: optionsTrackLocalhost === 'true',
-    apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io',
-    ...context.$config?.plausible
+    apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io'
   } as PlausibleOptions
 
   if (options.domain !== null) {
