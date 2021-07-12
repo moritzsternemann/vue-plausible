@@ -36,27 +36,52 @@ To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()
 /// <reference types="vue-plausible" />
 
 export default {
-  // ...
   modules: [
     'vue-plausible'
-  ],
+  ]
+}
+```
+
+#### Module Options
+
+Add a `plausible` section to `nuxt.config.js` to set the module options:
+```ts
+// nuxt.config.js
+
+export default {
   plausible: {
     // see configuration section
+  }
+}
+```
+
+#### Runtime Config
+
+To use dynamic environment variables in production, use [`publicRuntimeConfig`](https://nuxtjs.org/guide/runtime-config).
+Otherwise, the configuration options passed in `nuxt.config.js` will be read once and bundled during the build only.
+See the [configuration section](#configuration) for all available options.
+
+```ts
+// nuxt.config.js
+
+export default {
+  buildModules: [
+    'vue-plausible'
+  ],
+  plausible: { // Use as fallback if no runtime config is available at runtime
+    domain: process.env.PLAUSIBLE_DOMAIN
   },
-  // ...
-  // Or use publicRuntimeConfig to allow dotenv configuration over
-  // different environments
   publicRuntimeConfig: {
     plausible: {
-      domain: process.env.PLAUSIBLE_DOMAIN || null,
-      apiHost: process.env.PLAUSIBLE_API_HOST || 'https://plausible.io',
-    },
+      domain: process.env.PLAUSIBLE_DOMAIN,
+      apiHost: process.env.PLAUSIBLE_API_HOST
+    }
   }
 }
 ```
 
 ## Usage
-`vue-plausible` uses the [`plausible-tracker`](https://github.com/plausible/plausible-tracker) package in the background.
+`vue-plausible` is based on the official [`plausible-tracker`](https://github.com/plausible/plausible-tracker) package.
 
 ### Configuration
 Configuration options are inherited from `plausible-tracker`:
@@ -76,11 +101,12 @@ The `Plausible` instance is exposed to your Vue.js or NuxtJS app in the followin
 - `this.$plausible` inside Vuex stores (NuxtJS only)
 
 ### Proxying
-To use proxying as described in the [Plausible 'Using a proxy' documentation](https://plausible.io/docs/proxy/introduction), you need to adjust the `apiHost` configuration option accordingly. Using vue-plausible only requires to proxy the `/api/event` endpoint since the frontend code is already bundled from `plausible-tracker`.
+To use proxying as described in the [Plausible 'Using a proxy' documentation](https://plausible.io/docs/proxy/introduction), you need to adjust the `apiHost` configuration option accordingly.
+Using vue-plausible only requires to proxy the `/api/event` endpoint since the frontend code is already bundled from `plausible-tracker`.
+
 Please note that event endpoint path always ends with `/api/event`. See the following example:
 ```ts
 plausible: {
-  // ...
   apiHost: 'https://<yourdomain.com>/stats' // Reports events to https://<yourdomain.com>/stats/api/event
 }
 ```
