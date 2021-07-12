@@ -24,6 +24,13 @@ declare module '@nuxt/types' {
   }
 }
 
+declare module '@nuxt/types/config/runtime' {
+  // runtime config in nuxt.config.ts
+  interface NuxtRuntimeConfig {
+    plausible?: PlausibleOptions
+  }
+}
+
 declare module 'vuex/types/index' {
   // this.$plausible inside Vuex stores
   interface Store<S> {
