@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.4...v1.2.0) (2021-07-12)
+
+
+### Features
+
+* Use Nuxt runtime config ([#11](https://github.com/moritzsternemann/vue-plausible/issues/11)) ([bfcf70a](https://github.com/moritzsternemann/vue-plausible/commit/bfcf70a118faacb717cdacf46e0a6d6387721a97)), closes [moritzsternemann/vue-plausible#10](https://github.com/moritzsternemann/vue-plausible/issues/10)
+
 ### [1.1.4](https://github.com/moritzsternemann/vue-plausible/compare/v1.1.3...v1.1.4) (2021-03-18)
 
 
