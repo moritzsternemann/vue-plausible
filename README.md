@@ -25,8 +25,10 @@ Vue.use(VuePlausible, {
 })
 
 Vue.$plausible.enableAutoPageviews() // optional
+Vue.$plausible.enableAutoOutboundTracking() // optional
 ```
 To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()` method.
+To enable automatic outbound link tracking, call the `enableAutoOutboundTracking()` method.
 
 ### NuxtJS Module
 ```ts
@@ -79,6 +81,18 @@ export default {
   }
 }
 ```
+
+#### Outbound Link Tracking
+
+Currently, the preferred way to enable outbound link tracking in Nuxt apps is by using a plugin as follows:
+```ts
+// plugins/plausible-outbound.client.ts
+
+export default function({ $plausible }) {
+  $plausible.enableAutoOutboundTracking()
+}
+```
+Don't forget to include the plugin in your `nuxt.config.ts` and make sure you do so [only in the client side](https://nuxtjs.org/docs/directory-structure/plugins/#client-or-server-side-only).
 
 ## Usage
 `vue-plausible` is based on the official [`plausible-tracker`](https://github.com/plausible/plausible-tracker) package.
