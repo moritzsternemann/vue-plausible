@@ -1,5 +1,6 @@
 import { PluginFunction } from 'vue'
-import Plausible, { PlausibleOptions } from 'plausible-tracker'
+import Plausible from 'plausible-tracker'
+import { PlausibleModuleOptions } from './module-options'
 
 declare module 'vue/types/vue' {
   interface VueConstructor {
@@ -11,8 +12,15 @@ declare module 'vue/types/vue' {
   }
 }
 
-const VuePlausible: PluginFunction<PlausibleOptions> = (Vue, options) => {
+const VuePlausible: PluginFunction<PlausibleModuleOptions> = (Vue, options) => {
   const plausible = Plausible(options)
+
+  if (options?.enableAutoPageviews === true) {
+    plausible.enableAutoPageviews()
+  }
+  if (options?.enableAutoOutboundTracking === true) {
+    plausible.enableAutoOutboundTracking()
+  }
 
   Vue.$plausible = plausible
   Vue.prototype.$plausible = plausible

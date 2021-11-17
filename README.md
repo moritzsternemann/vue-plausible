@@ -23,9 +23,6 @@ import { VuePlausible } from 'vue-plausible'
 Vue.use(VuePlausible, {
   // see configuration section
 })
-
-Vue.$plausible.enableAutoPageviews() // optional
-Vue.$plausible.enableAutoOutboundTracking() // optional
 ```
 To enable automatic page view tracking for SPAs, call the `enableAutoPageviews()` method.
 To enable automatic outbound link tracking, call the `enableAutoOutboundTracking()` method.
