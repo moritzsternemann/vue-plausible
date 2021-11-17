@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.1...v1.3.0) (2021-11-17)
+
+
+### Features
+
+* Options for auto pageviews and auto outbound tracking ([1fc0b2b](https://github.com/moritzsternemann/vue-plausible/commit/1fc0b2b8c85dc230cc260d36683074191e8d09d4))
+
 ### [1.2.1](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.0...v1.2.1) (2021-07-12)
 
 
