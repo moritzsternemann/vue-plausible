@@ -15,7 +15,6 @@
     "declaration": true,
     "declarationDir": "./lib/types",
     "declarationMap": true,
-    "removeComments": true,
     "outDir": "./lib/esm"
   },
   "include": [
