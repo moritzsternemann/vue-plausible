@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.1...v1.3.0) (2021-11-17)
+
+
+### Features
+
+* Options for auto pageviews and auto outbound tracking in Nuxt module ([8125f2b](https://github.com/moritzsternemann/vue-plausible/commit/8125f2bfa2931e7739d1648ab5fe33eb0d7bba30))
+* Options for auto pageviews and auto outbound tracking in Vue plugin ([44dc898](https://github.com/moritzsternemann/vue-plausible/commit/44dc898304f436f9757da6b76188ba76567fdd2a))
+
 ### [1.2.1](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.0...v1.2.1) (2021-07-12)
 
 
