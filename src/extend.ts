@@ -1,5 +1,5 @@
 import Plausible from 'plausible-tracker'
-import { PlausibleModuleOptions } from './nuxt-module'
+import { PlausibleModuleOptions } from './module-options'
 
 declare module 'vue/types/vue' {
   // this.$plausible inside Vue components

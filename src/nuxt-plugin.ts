@@ -1,6 +1,6 @@
 import { Plugin } from '@nuxt/types'
 import Plausible from 'plausible-tracker'
-import { PlausibleModuleOptions } from './nuxt-module'
+import { PlausibleModuleOptions } from './module-options'
 
 const PlausiblePlugin: Plugin = (context, inject) => {
   const optionsDomain = '<%= options.domain %>'

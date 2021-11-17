@@ -1,4 +1,5 @@
 import './extend'
 
+export { PlausibleModuleOptions } from './module-options'
 export { default as VuePlausible } from './vue-plugin'
-export { default, PlausibleModuleOptions } from './nuxt-module'
+export { default } from './nuxt-module'
