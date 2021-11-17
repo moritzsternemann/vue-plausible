@@ -1,4 +1,5 @@
-import Plausible, { PlausibleOptions } from 'plausible-tracker'
+import Plausible from 'plausible-tracker'
+import { PlausibleModuleOptions } from './nuxt-module'
 
 declare module 'vue/types/vue' {
   // this.$plausible inside Vue components
@@ -10,7 +11,7 @@ declare module 'vue/types/vue' {
 declare module '@nuxt/types' {
   // module configuration in nuxt.config.ts
   interface NuxtOptions {
-    plausible?: PlausibleOptions
+    plausible?: PlausibleModuleOptions
   }
 
   // nuxtContext.app.$plausible inside asyncData, fetch, plugins, middleware, nuxtServerInit
@@ -27,7 +28,7 @@ declare module '@nuxt/types' {
 declare module '@nuxt/types/config/runtime' {
   // runtime config in nuxt.config.ts
   interface NuxtRuntimeConfig {
-    plausible?: PlausibleOptions
+    plausible?: PlausibleModuleOptions
   }
 }
 

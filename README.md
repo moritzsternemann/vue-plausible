@@ -82,18 +82,6 @@ export default {
 }
 ```
 
-#### Outbound Link Tracking
-
-Currently, the preferred way to enable outbound link tracking in Nuxt apps is by using a plugin as follows:
-```ts
-// plugins/plausible-outbound.client.ts
-
-export default function({ $plausible }) {
-  $plausible.enableAutoOutboundTracking()
-}
-```
-Don't forget to include the plugin in your `nuxt.config.ts` and make sure you do so [only in the client side](https://nuxtjs.org/docs/directory-structure/plugins/#client-or-server-side-only).
-
 ## Usage
 `vue-plausible` is based on the official [`plausible-tracker`](https://github.com/plausible/plausible-tracker) package.
 
@@ -101,10 +89,13 @@ Don't forget to include the plugin in your `nuxt.config.ts` and make sure you do
 Configuration options are inherited from `plausible-tracker`:
 | Option | Type | Description | Default |
 | ------ | ---- | ----------- | ------- |
-| domain | `string` | Your site's domain, as declared by you in Plausible's settings. | `location.hostname` |
+| domain | `string` | Your site's domain name, as declared by you in Plausible's settings. | `location.hostname` |
 | hashMode | `boolean` | Enables tracking based on URL hash changes. | `false` |
 | trackLocalhost | `boolean` | Enables tracking on *localhost*. | `false` |
 | apiHost | `string` | Plausible's API host to use. Change this if you are self-hosting. | `https://plausible.io` |
+|||||
+| enableAutoPageviews | `boolean` | Enables automatic pageview tracking in SPAs. [Learn more](https://github.com/plausible/plausible-tracker#automatically-tracking-page-views) | `true` |
+| enableAutoOutboundTracking | `boolean` | Enables automatic outbound link click tracking. [Learn more](https://github.com/plausible/plausible-tracker#outbound-link-click-tracking) | `false` |
 
 ### Integration
 The `plausible-tracker` package provides various methods to track specific events, for example [`trackPageview()`](https://github.com/plausible/plausible-tracker/blob/master/README.md#automatically-tracking-page-views) and [`trackEvent()`](https://github.com/plausible/plausible-tracker/blob/master/README.md#tracking-custom-events-and-goals). You can find all the available methods and options in [the plausible-tracker documentation](https://github.com/plausible/plausible-tracker/blob/master/README.md).
