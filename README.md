@@ -125,6 +125,12 @@ plausible: {
 }
 ```
 
+### Opt out
+
+To exclude yourself from the analytics, `plausible-tracker` offers an opt-out mechanism that can be activated by setting the `localStorage.plausible_ignore` value to `true`.
+
+More information can be found in the [Plausible documentation](https://plausible.io/docs/excluding-localstorage).
+
 ## Author
 I'm [Moritz Sternemann](https://github.com/moritzsternemann), a computer-science student at [Technical University of Munich](https://www.tum.de/).
 - GitHub: [@moritzsternemann](https://github.com/moritzsternemann)
