@@ -13,6 +13,8 @@ const defaultOptions: PlausibleModuleOptions = {
 }
 
 const PlausibleModule: Module<PlausibleModuleOptions> = function (moduleOptions) {
+  if (!this) return;
+  
   const options = {
     ...defaultOptions,
     ...this.options.plausible,
