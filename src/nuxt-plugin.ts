@@ -10,8 +10,7 @@ const PlausiblePlugin: Plugin = (context, inject) => {
   const optionsEnableAutoPageviews = '<%= options.enableAutoPageviews %>' as any
   const optionsEnableAutoOutboundTracking = '<%= options.enableAutoOutboundTracking %>' as any
 
-  const options = {
-    domain: optionsDomain.length ? optionsDomain : null,
+  let options = {
     hashMode: optionsHashMode === 'true',
     trackLocalhost: optionsTrackLocalhost === 'true',
     apiHost: optionsApiHost.length ? optionsApiHost : 'https://plausible.io',
@@ -21,18 +20,23 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     ...context.$config?.plausible
   } as PlausibleModuleOptions
 
-  if (options.domain !== null) {
-    const plausible = Plausible(options)
-
-    if (options.enableAutoPageviews === true) {
-      plausible.enableAutoPageviews()
+  if (optionsDomain.length) {
+    options = {
+      ...options,
+      domain: optionsDomain
     }
-    if (options.enableAutoOutboundTracking === true) {
-      plausible.enableAutoOutboundTracking()
-    }
-
-    inject('plausible', plausible)
   }
+
+  const plausible = Plausible(options)
+
+  if (options.enableAutoPageviews === true) {
+    plausible.enableAutoPageviews()
+  }
+  if (options.enableAutoOutboundTracking === true) {
+    plausible.enableAutoOutboundTracking()
+  }
+
+  inject('plausible', plausible)
 }
 
 export default PlausiblePlugin
