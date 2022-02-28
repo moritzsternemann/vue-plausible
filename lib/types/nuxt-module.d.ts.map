@@ -1,0 +1,1 @@
+{"version":3,"file":"nuxt-module.d.ts","sourceRoot":"","sources":["../../src/nuxt-module.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,MAAM,EAAE,MAAM,aAAa,CAAA;AACpC,OAAO,EAAE,sBAAsB,EAAE,MAAM,kBAAkB,CAAA;AAYzD,QAAA,MAAM,eAAe,EAAE,MAAM,CAAC,sBAAsB,CAgBnD,CAAA;AAED,eAAe,eAAe,CAAA;AAE9B,eAAO,MAAM,IAAI,KAAgC,CAAA"}
