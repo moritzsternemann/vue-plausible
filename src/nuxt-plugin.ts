@@ -36,7 +36,13 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     plausible.enableAutoOutboundTracking()
   }
 
-  inject('plausible', plausible)
+  if (inject) {
+    // Nuxt 2
+    inject('plausible', plausible)
+  } else {
+    // Nuxt 3
+    context.provide('plausible', plausible)
+  }
 }
 
 export default PlausiblePlugin
