@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/moritzsternemann/vue-plausible/compare/v1.3.1...v1.3.2) (2022-07-13)
+
+
+### Bug Fixes
+
+* hotfix provide for nuxt 3 ([#21](https://github.com/moritzsternemann/vue-plausible/issues/21)) ([1bbb6da](https://github.com/moritzsternemann/vue-plausible/commit/1bbb6da33c44ffb9610bfd7209f8d58fb7232804))
+
 ### [1.3.1](https://github.com/moritzsternemann/vue-plausible/compare/v1.3.0...v1.3.1) (2021-11-17)
 
 ## [1.3.0](https://github.com/moritzsternemann/vue-plausible/compare/v1.2.1...v1.3.0) (2021-11-17)
