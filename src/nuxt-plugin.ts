@@ -41,6 +41,7 @@ const PlausiblePlugin: Plugin = (context, inject) => {
     inject('plausible', plausible)
   } else {
     // Nuxt 3
+    // @ts-ignore
     context.provide('plausible', plausible)
   }
 }
